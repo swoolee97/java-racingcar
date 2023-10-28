@@ -1,6 +1,6 @@
-package racingcar.model;
+package racingcar.domain;
 
-public class Name {
+public final class Name {
     private static final int MIN_NAME_LENGTH = 1;
     private static final int MAX_NAME_LENGTH = 5;
     private static final String NAME_LENGTH_EXCEPTION_MESSAGE = String.format("이름은 %d~%d글자여야 합니다", MIN_NAME_LENGTH,

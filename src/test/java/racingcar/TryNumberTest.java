@@ -4,7 +4,7 @@ import static camp.nextstep.edu.missionutils.test.Assertions.assertSimpleTest;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.junit.jupiter.api.Test;
-import racingcar.model.TryNumber;
+import racingcar.domain.TryNumber;
 
 public class TryNumberTest {
     @Test

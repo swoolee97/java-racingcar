@@ -1,7 +1,8 @@
-package racingcar.model;
+package racingcar.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 import racingcar.validator.InputValidator;
 
@@ -27,12 +28,10 @@ public class Cars {
         cars.forEach(Car::decideToMove);
     }
 
-    public String generateRoundResultString() {
-        StringBuilder sb = new StringBuilder();
-        cars.forEach(car -> {
-            sb.append(car.toString());
-        });
-        return sb.toString();
+    public void forEachCar(BiConsumer<Name, Position> carConsumer) {
+        for (Car car : cars) {
+            car.processNameAndPosition(carConsumer);
+        }
     }
 
     public int getMaxPosition() {

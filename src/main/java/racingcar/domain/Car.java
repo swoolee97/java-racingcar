@@ -1,4 +1,4 @@
-package racingcar.model;
+package racingcar.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
@@ -32,4 +32,13 @@ public class Car {
     public String toString() {
         return name.toString() + " : " + position.toString() + "\n";
     }
+
+    public Name name() {
+        return name;
+    }
+
+    public Position position() {
+        return position;
+    }
+
 }

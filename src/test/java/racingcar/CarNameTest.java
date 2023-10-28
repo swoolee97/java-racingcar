@@ -4,8 +4,8 @@ import static camp.nextstep.edu.missionutils.test.Assertions.assertSimpleTest;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.junit.jupiter.api.Test;
-import racingcar.model.Cars;
-import racingcar.model.Name;
+import racingcar.domain.Cars;
+import racingcar.domain.Name;
 
 public class CarNameTest {
     @Test

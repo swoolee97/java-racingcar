@@ -1,4 +1,4 @@
-package racingcar.model;
+package racingcar.domain;
 
 public class Position {
     private static final int ZERO_POSITION = 0;
@@ -18,8 +18,8 @@ public class Position {
         return this.position;
     }
 
-    @Override
-    public String toString() {
-        return DISPLAY_STRING.repeat(this.position);
-    }
+//    @Override
+//    public String toString() {
+//        return DISPLAY_STRING.repeat(this.position);
+//    }
 }

@@ -1,12 +1,10 @@
-package racingcar.controller;
+package racingcar.service;
 
 import java.util.List;
-import racingcar.model.Cars;
-import racingcar.model.TryNumber;
-import racingcar.view.InputView;
-import racingcar.view.OutputView;
+import racingcar.domain.Cars;
+import racingcar.domain.TryNumber;
 
-public class RacingGame {
+public class RacingGameService {
 
     private Cars cars;
     private TryNumber tryNumber;
@@ -18,23 +16,23 @@ public class RacingGame {
     }
 
     private void initialize() {
-        cars = new Cars(InputView.readCarNames());
-        tryNumber = new TryNumber(InputView.readTryNumber());
+        cars = new Cars(InputService.readCarNames());
+        tryNumber = new TryNumber(InputService.readTryNumber());
     }
 
     private void raceStart() {
         int count = 0;
-        OutputView.startDisplayRoundResults();
+        OutputService.startDisplayRoundResults();
         while (!tryNumber.isOver(count)) {
             cars.decideToMove();
-            OutputView.displayRoundResult(cars);
+            OutputService.displayRoundResult(cars);
             count++;
         }
     }
 
     private void displayWinners() {
         List<String> winners = cars.getWinners();
-        OutputView.displayWinners(winners);
+        OutputService.displayWinners(winners);
     }
 
 }
